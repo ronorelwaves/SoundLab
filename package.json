@@ -1,0 +1,19 @@
+{
+  "name": "sound-lab",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "node --test tests/questions.test.js && playwright test"
+  },
+  "dependencies": {
+    "@fontsource/heebo": "^5.3.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.0",
+    "vite": "^8.3.3"
+  }
+}
