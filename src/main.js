@@ -6,6 +6,8 @@ import "./lesson1/styles.css";
 import { lessons } from "./data/lessons.js";
 import { welcomePage, lessonsPage, lessonPage } from "./pages.js";
 import { renderLesson1 } from "./lesson1/index.js";
+import { renderLesson2 } from "./lesson2/index.js";
+import "./lesson2/styles.css";
 
 const app = document.querySelector("#app");
 let cleanup = () => {};
@@ -17,7 +19,7 @@ function render(moveFocus = false) {
   const lesson = lessons.find((item) => path === `/lessons/${item.id}`);
   const lessonCleanup = path.startsWith("/lessons/1")
     ? renderLesson1(app, path)
-    : null;
+    : renderLesson2(app, path);
   if (lessonCleanup) {
     cleanup = lessonCleanup;
   } else if (path === "/") {

@@ -81,7 +81,7 @@ test("original welcome content, lesson overview, ordered slides, keyboard, fulls
     "בכל מצב, אם אתם מרגישים חוסר נוחות או כאב הפסיקו מיד את התרגיל והנמיכו את הווליום לגובה נוח ונעים. שמרו על האוזניים והשמיעה שלכם.",
   ]);
   await page.getByRole("link", { name: "קדימה לשיעורים" }).click();
-  await page.locator(".lesson-card").click();
+  await page.locator('.lesson-card[href="/lessons/1"]').click();
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(
     "שיעור 1 – מה זה קול?",
   );
