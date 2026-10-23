@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 
 test("lesson 2 discovery, all original slides, keyboard, fullscreen and history", async ({ page }) => {
   await page.goto("/lessons");
-  await expect(page.locator(".lesson-card")).toHaveCount(2);
+  await expect(page.locator(".lesson-card")).toHaveCount(3);
   await page.locator('.lesson-card[href="/lessons/2"]').click();
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("שיעור 2 – האוזן האנושית והשמיעה");
   await expect(page.locator(".activity-card")).toHaveCount(4);
